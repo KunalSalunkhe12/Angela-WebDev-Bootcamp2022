@@ -47,8 +47,8 @@ function makeSound(key){
      crash.play();
     break;
 
-    case "d":
-     var bass = new Audio("sounds/kickbass.mp3");
+    case "l":
+     var bass = new Audio("sounds/kickbass.wav");
      bass.play();
     break;
 
@@ -60,4 +60,7 @@ function makeSound(key){
 function buttonAnimation(currentKey){
   var activeKey = document.querySelector("." + currentKey);
   activeKey.classList.add("pressed");
+  setTimeout(()=>{
+    activeKey.classList.remove('pressed');
+  },200)
 }
