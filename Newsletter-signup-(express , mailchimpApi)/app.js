@@ -11,8 +11,8 @@ app.use(express.static("public"))
 
 
 mailchimp.setConfig({
-  apiKey: "8065c615b0b7a517c1a5ffe0dc8cc17d-us17",
-  server: "us17",
+  apiKey: ['Your Api Key'],
+  server: ['Your server (eg us17, us16'],
 });
 
 
@@ -60,10 +60,6 @@ app.post("/", (req, res) => {
 
 
 });
-
-// app.post("/failure", (req, res) => {
-//   res.redirect("/");
-// })
 
 
 app.listen(3000, () => {
